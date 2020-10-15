@@ -1,0 +1,77 @@
+<html>
+<head>
+	<style>
+		.form-gap {
+    		padding-top: 10px;
+		}
+		.main_reset {background-color: coral;height:100vh;}
+
+	</style>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+<div class="main_reset">
+
+<div class="form-gap">
+	<center><h3>Mail Sender For <b>Bytecode</b></h3></center>
+</div>
+<br>
+	<div class="container">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="text-center">
+                  <h3><i class="glyphicon glyphicon-envelope color-blue fa-4x"></i></h3>
+                  <h2 class="text-center">Send Email</h2>
+                  <p>Please Enter Email And Message.</p>
+
+                  <div class="panel-body">
+
+
+
+
+
+				<form id="register-form" role="form" autocomplete="off" class="form" method="post" action="{% url 'send_email' %}">
+ 						<div class="form-group">
+                        <div class="input-group">
+
+							{% csrf_token %}
+                            <b>Receiver Email </b> <br><br><input type="email" name="to" style="width:100%;">
+                                    <br>
+                                    <br>
+                                    <br>
+                            <b>Your Message</b> <br><br> <textarea type="text" rows="5" cols="40" name="message"></textarea>
+
+						</div>
+ 						</div>
+						<div class="form-group">
+							<input class="btn btn-lg btn-primary btn-block" type="Submit" name="Update Password">
+						</div>
+				</form>
+
+
+
+					   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+	</div>
+	</div>
+
+    <center><footer><h4><b>By ~ Sourabh Saraswat</b></h4></footer></center>
+
+</div>
+
+
+</body>
+</html>

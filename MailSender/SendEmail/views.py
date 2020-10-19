@@ -5,7 +5,7 @@ from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from django.conf import settings
 
-# Create your views 
+# Create your views here.
 
 def home(request):
     return render(request, 'index.html')
